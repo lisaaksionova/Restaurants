@@ -4,10 +4,23 @@
 
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/weatherforecast
+GET {{Restaurants_API_HostAddress}}/api/restaurants/3
 Accept: application/json
-Guid: {{$guid}}
-LocalDate: {{$datetime_iso8601}}
-RandomInt: {{$randomInt}}
+
 
 ###
+
+POST {{Restaurants_API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+      "Name": "111",
+      "Description": "A cozy restaurant serving a variety of delicious dishes.",
+      "Category": "Indian",
+      "HasDelivery": true, 
+      "ContactEmail": "info@test.com",
+      "ContactNumber": "555-1234",
+      "City": "New York",
+      "Street": "123 Main Street",
+      "PostalCode": "10-010"
+}
