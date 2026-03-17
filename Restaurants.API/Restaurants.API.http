@@ -4,10 +4,10 @@
 
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/weatherforecast
+GET {{Restaurants_API_HostAddress}}/api/restaurants
 Accept: application/json
-Guid: {{$guid}}
-LocalDate: {{$datetime_iso8601}}
-RandomInt: {{$randomInt}}
 
 ###
+
+GET {{Restaurants_API_HostAddress}}/api/restaurants/1
+Accept: application/json
