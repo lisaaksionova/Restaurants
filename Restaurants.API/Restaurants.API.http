@@ -24,3 +24,7 @@ Content-Type: application/json
       "Street": "123 Main Street",
       "PostalCode": "10-010"
 }
+
+###
+DELETE {{Restaurants_API_HostAddress}}/api/restaurants/3
+Accept: application/json
