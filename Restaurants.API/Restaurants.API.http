@@ -4,7 +4,7 @@
 
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/api/restaurants
+GET {{Restaurants_API_HostAddress}}/api/restaurants/666
 Accept: application/json
 
 
@@ -26,7 +26,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{Restaurants_API_HostAddress}}/api/restaurants/7
+DELETE {{Restaurants_API_HostAddress}}/api/restaurants/666
 Accept: application/json
 
 ###
