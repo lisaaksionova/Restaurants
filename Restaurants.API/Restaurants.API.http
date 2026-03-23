@@ -4,7 +4,7 @@
 
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/api/restaurants/666
+GET {{Restaurants_API_HostAddress}}/api/restaurants
 Accept: application/json
 
 
