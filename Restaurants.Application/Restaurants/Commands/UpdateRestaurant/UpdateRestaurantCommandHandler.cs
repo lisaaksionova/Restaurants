@@ -11,11 +11,10 @@ public class UpdateRestaurantCommandHandler(ILogger<UpdateRestaurantCommandHandl
 {
     public async Task<bool> Handle(UpdateRestaurantCommand request, CancellationToken cancellationToken)
     {
-        logger.LogInformation("Updating restaurant with ID : " + request.Id);
+        logger.LogInformation("Updating restaurant with ID : {RestaurantId} with {@UpdateRestaurant}", request.Id, request);
         var restaurant = await restaurantsRepository.GetByIdAsync(request.Id);
         if (restaurant == null)
         {
-            logger.LogError("Restaurant with ID : " + request.Id + " not found");
             return false;
         }
         
