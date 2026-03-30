@@ -18,9 +18,4 @@ internal class DishesRepository(RestaurantsDbContext context) : IDishesRepositor
         context.Dishes.RemoveRange(dishes);
         await context.SaveChangesAsync();
     }
-
-    public Task SaveChangesAsync()
-    {
-        throw new NotImplementedException();
-    }
 }
