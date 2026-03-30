@@ -4,7 +4,7 @@
 
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/api/restaurants
+GET {{Restaurants_API_HostAddress}}/api/restaurants/4
 Accept: application/json
 
 
@@ -38,3 +38,22 @@ Content-Type: application/json
   "description": "test2",
   "hasDelivery": true
 }
+
+###
+@restaurantId = 1
+
+POST {{Restaurants_API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
+Content-Type: application/json
+
+{
+  "Name": "Spaghetti",
+  "Description": "Classic Italian pasta"
+}
+
+### 
+
+GET {{Restaurants_API_HostAddress}}/api/restaurants/4/dishes
+
+### 
+
+DELETE {{Restaurants_API_HostAddress}}/api/restaurants/4/dishes
