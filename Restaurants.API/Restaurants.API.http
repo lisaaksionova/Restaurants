@@ -1,10 +1,10 @@
 
 @host = http://localhost
 @port = 5026
-@token = CfDJ8Ip7dGhlioVKogTBOl9a_KYCzpoKhmxRDp97X7wRKHgHp1b-Fye-xbYEdMkCuH-ZbBFHn0XOgo7gvGasOEl-5vaQDDaNsled3yEZbaHBP8GDKZVwbYFfQvLyUZbOhwWPKlNLKfG3T2EYmg-H3HKULpYoMC88lzDh6fYrbMRKzUA1rlrfyMXtzcvD-t98Sgna7N7WWGCefqAzYJyxeRn8AgL6pLPhB3QTJvUiJUm7TgRx8Q270p4CIylKJFCBBCS7xylHPq1ItR89Z-07sih8-UCq3pNQCi5qqzgOtkmL-HcVPuT1Lpm91_HN-j8sWboTrTU60HhsFQZMxeqT9PLyMaFnyqx6vjc7mk3W-30jjcBHNmNjfnc45bmuKqS47CogmGidq4mPHBKz4rW_5KK-LY_nSewzHWCzFR86Yi6YoqKdtUo58MKQE8mjHlfttKSVr3IxRnv4kVx5WREMm-rH3AqxIZtJ_ebpYYJPGdX2Qj6CpEyxZZmwrtTrOUhbHGDbSsGgsvbni9YZM7gT4roPxeocmbICKhvc_Plff7kXkK1mxJ3U0D7Xon6AdU9V-ZrEU1hY7xBlDMEABNIgw8m_O-QVb4rWgdMuo6QgnOxemKfKE8OYxO_T9WWbsAzu2VJWm8aALAHnQXtZTCxwfzdnJjk2FjpHTFeenmoHtvpL6E_s0qfPbTaNScryNZcao-UQQMK3hpGoaO3wZkGgcJEN5ZsfWS_6HneXgKXbb3jNAzznJ7GKLod_VWuGG0yLyNWmjbHiQDIjk0BGEjeg0OvWGD9i8_CFtTrlZSfrZNPtjl4Z
+@token = CfDJ8Ip7dGhlioVKogTBOl9a_Ka6A76UgC0mm3FHifwCWuQRJeQCoR7hCGufAzLg9wvn6x8k7UeenXvTRuWrZIKR-EmENdzCgiysk5mW086dHd7-p1CI-CROssltHWpQK287IJsq-pby5bh49S1Ke9xyGxa31Zt0e_sf3sWIqG9TIvIFSk2xgfxie9pj5IpnEkVZi3GCAST02zC_wdrD0IS3m-XvBAxzviZk1mNGHG0ujWzgAlFOlCB3_x2Nk-Y754VjJNENnLTCTvBt4YXHoxRj1XUDiW7Xni4sTBGg9Lc3Xn17xoBErnzQ_qGFZ7RtELAa-dSJPa25ItRer0yyzabDTjqUXn59fMZsBUt_3NleYGQ-4MpXVAd8glKLXosHpmODZljtQyyFD0RmeqaNM2TK1RBm3QJ6SSLodsG9vKwixrPBof__gmZHZlQTdUe3JpGyRXJMMGZ7SM0mijPaby-ZAUKmjGOs4qbTG_pyDUyrcKihoe14MUuWTVtfPqWJJVyeLrKhrRsMcvjmOQt_j7LYcndhb6ccwFg2y_xQFKDwL6lRhxLyuQ2ww_Zu1Uyc-yz8Qge8_GLfsucGWmOsKIOHWloOlxYwLaGD7JJKVgUCePwXh_Vfyv41r9TjBgnD0NviwoJSfr_BHkclCnt_z7dU1Zc22PAW09DpdyDuLtPGehTzzge2aHNmFDEFChkfURMLisOuL-5QDNtKlDN1RLyxubeIzDygH174AchXWdD0no-Svi--wGjHfi4A636OaK9224KS3GvvGc4-5TlAsqTcns-ZgkOMd_ObPqcbNTQz3uQY
 @Restaurants_API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_API_HostAddress}}/api/restaurants
+GET {{Restaurants_API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Ascending
 Authorization: Bearer {{token}}
 
 
@@ -15,7 +15,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-      "Name": "111",
+      "Name": "new",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true, 
@@ -27,12 +27,14 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{Restaurants_API_HostAddress}}/api/restaurants/666
+DELETE {{Restaurants_API_HostAddress}}/api/restaurants/12
+Authorization: Bearer {{token}}
 Accept: application/json
 
 ###
-PATCH {{Restaurants_API_HostAddress}}/api/restaurants/8
+PATCH {{Restaurants_API_HostAddress}}/api/restaurants/12
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "name": "test2",
@@ -73,7 +75,7 @@ POST {{Restaurants_API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-  "email": "admin@test.com",
+  "email": "owner@test.com",
   "password": "Password1!"
 }
 
