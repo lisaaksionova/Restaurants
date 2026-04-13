@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Castle.Core.Logging;
 using FluentAssertions;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Authorization;
