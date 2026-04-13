@@ -5,7 +5,7 @@ using Restaurants.Domain.Repositories;
 
 namespace Restaurants.Infrastructure.Authorization.Requirements.RestaurantsCount;
 
-public class RestaurantsCountRequirementHandler(ILogger<RestaurantsCountRequirementHandler> logger,
+internal class RestaurantsCountRequirementHandler(ILogger<RestaurantsCountRequirementHandler> logger,
     IUserContext userContext,
     IRestaurantsRepository restaurantsRepository) : AuthorizationHandler<RestaurantsCountRequirement>
 {
